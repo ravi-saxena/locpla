@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale = 1.0">
+    <meta name="author" content="http://www.bwaystechnosolution.com/">
+    <meta name="description" content="http://www.bwaystechnosolution.com/">
+    <meta name="keywords" content="http://www.bwaystechnosolution.com/">
+    <title>Best Search</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+
+    <script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var $ = jQuery.noConflict();
+        jQuery(function () {
+            window.localStorage.removeItem("searchedlist");
+            $('#activator_menu').click(function() {
+                jQuery('#box_share').animate({ 'top': '65px' }, 500);
+            });
+
+            $('#boxclose').click(function() {
+
+                $('#box_share').animate({ 'top': '-400px' }, 500);
+            });
+
+        });
+
+        function search() {
+            SearchType($('#ddlSearch').val());
+        }
+        function SearchType(d) {
+            window.localStorage.setItem("SearchType", d);
+            window.location.href = "map.html";
+        }
+    </script>
+
+</head>
+<body>
+    <div id="main_container">
+        <div class="logo">
+                <img src="images/ic_launcher.gif" alt="" title="" border="0" />
+        </div>
+        <div class="box" id="box_share">
+            <div class="box_content">
+                <div class="box_content_tab">
+                    Custom Search
+                </div>
+                <div class="box_content_center">
+                    <div class="form_content">
+                        <select id="ddlSearch" class="form_input_box" style="width: 100%; height:40px;">
+                            <option value="accounting">Accounting</option>
+                            <option value="airport">Airport</option>
+                            <option value="amusement_park">Amusement Park</option>
+                            <option value="aquarium">Aquarium</option>
+                            <option value="art_gallery">Art Gallery</option>
+                            <option value="atm">ATM</option>
+                            <option value="bakery">Bakery</option>
+                            <option value="bank">Bank</option>
+                            <option value="bar">Bar</option>
+                            <option value="beauty_salon">Beauty Salon</option>
+                            <option value="bicycle_store">Bicycle Store</option>
+                            <option value="book_store">Book Store</option>
+                            <option value="bowling_alley">Bowling Alley</option>
+                            <option value="bus_station">Bus Atation</option>
+                            <option value="cafe">Cafe</option>
+                            <option value="campground">Campground</option>
+                            <option value="car_dealer">Car Dealer</option>
+                            <option value="car_rental">Car Rental</option>
+                            <option value="car_repair">Car Repair</option>
+                            <option value="car_wash">Car Wash</option>
+                            <option value="casino">Casino</option>
+                            <option value="cemetery">Cemetery</option>
+                            <option value="church">Church</option>
+                            <option value="city_hall">City Hall</option>
+                            <option value="clothing_store">Clothing Store</option>
+                            <option value="convenience_store">Convenience Store</option>
+                            <option value="courthouse">Courthouse</option>
+                            <option value="dentist">Dentist</option>
+                            <option value="department_store">Department Store</option>
+                            <option value="doctor">Doctor</option>
+                            <option value="electrician">Electrician</option>
+                            <option value="electronics_store">Electronics Store</option>
+                            <option value="embassy">Embassy</option>
+                            <option value="establishment">Establishment</option>
+                            <option value="finance">Finance</option>
+                            <option value="fire_station">Fire Station</option>
+                            <option value="florist">Florist</option>
+                            <option value="food">Food</option>
+                            <option value="funeral_home">Funeral Home</option>
+                            <option value="furniture_store">Furniture Store</option>
+                            <option value="gas_station">Gas Station</option>
+                            <option value="general_contractor">General Contractor</option>
+                            <option value="grocery_or_supermarket">Grocery or Supermarket</option>
+                            <option value="gym">Gym</option>
+                            <option value="hair_care">Hair Care</option>
+                            <option value="hardware_store">Hardware Store</option>
+                            <option value="health">Health</option>
+                            <option value="hindu_temple">Hindu Temple</option>
+                            <option value="home_goods_store">Home Goods Store</option>
+                            <option value="hospital">Hospital</option>
+                            <option value="insurance_agency">Insurance Agency</option>
+                            <option value="jewelry_store">Jewelry Store</option>
+                            <option value="laundry">Laundry</option>
+                            <option value="lawyer">Lawyer</option>
+                            <option value="library">Library</option>
+                            <option value="liquor_store">Liquor Store</option>
+                            <option value="local_government_office">Local Government Office</option>
+                            <option value="locksmith">Locksmith</option>
+                            <option value="lodging">Lodging</option>
+                            <option value="meal_delivery">Meal Delivery</option>
+                            <option value="meal_takeaway">Meal Takeaway</option>
+                            <option value="mosque">Mosque</option>
+                            <option value="movie_rental">Movie Rental</option>
+                            <option value="movie_theater">Movie Theater</option>
+                            <option value="moving_company">Moving Company</option>
+                            <option value="museum">Museum</option>
+                            <option value="night_club">Night Club</option>
+                            <option value="painter">Painter</option>
+                            <option value="park">Park</option>
+                            <option value="parking">Parking</option>
+                            <option value="pet_store">Pet Store</option>
+                            <option value="pharmacy">Pharmacy</option>
+                            <option value="physiotherapist">Physiotherapist</option>
+                            <option value="place_of_worship">Place of Worship</option>
+                            <option value="plumber">Plumber</option>
+                            <option value="police">Police</option>
+                            <option value="post_office">Post Office</option>
+                            <option value="real_estate_agency">Real Estate Agency</option>
+                            <option value="restaurant">Restaurant</option>
+                            <option value="roofing_contractor">Roofing Contractor</option>
+                            <option value="rv_park">RV Park</option>
+                            <option value="school">School</option>
+                            <option value="shoe_store">Shoe Store</option>
+                            <option value="shopping_mall">Shopping Mall</option>
+                            <option value="spa">SPA</option>
+                            <option value="stadium">Stadium</option>
+                            <option value="storage">Storage</option>
+                            <option value="store">Store</option>
+                            <option value="subway_station">Subway Station</option>
+                            <option value="synagogue">Synagogue</option>
+                            <option value="taxi_stand">Taxi Stand</option>
+                            <option value="train_station">Train Station</option>
+                            <option value="travel_agency">Travel Agency</option>
+                            <option value="university">University</option>
+                            <option value="veterinary_care">Veterinary Care</option>
+                            <option value="zoo">Zoo</option>
+                        </select>
+                        <a class="boxclose" id="boxclose">Close</a>
+                        <input type="button" id="boxclose1" class="form_submit" value="Submit" onclick="search();">
+                        
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a style="cursor: pointer;" onclick="SearchType('hospital');">
+                    <img src="images/Hospital.png" border="0" alt="" title="">Hospital </a></li>
+                <li><a style="cursor: pointer;" onclick="SearchType('food');">
+                    <img src="images/hotel.png" border="0" alt="" title="">Hotel</a></li>
+            </ul>
+            <ul>
+                <li><a style="cursor: pointer;" onclick="SearchType('bank');">
+                    <img src="images/bank.png" border="0" alt="" title="">Bank</a></li>
+                <li><a style="cursor: pointer;" onclick="SearchType('school');">
+                    <img src="images/education.png" border="0" alt="" title="">School</a></li>
+            </ul>
+            <ul>
+                <li><a style="cursor: pointer;" onclick="SearchType('Store');">
+                    <img src="images/shop.png" border="0" alt="" title="">Shopping</a></li>
+                <li><a id="activator_menu">
+                    <img src="images/icon10.png" border="0" alt="" title="">Custom</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
